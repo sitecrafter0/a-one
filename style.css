@@ -316,3 +316,14 @@ a.cta {
     gap:6px;
   }
 }
+/* MOBILE NAV SMOOTH SLIDE */
+.main-nav {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+/* Show class will set max-height dynamically via JS */
+.main-nav.show {
+  /* max-height set in JS */
+}
