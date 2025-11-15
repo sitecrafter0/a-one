@@ -74,7 +74,7 @@ a.cta {
 
 /* HERO SECTION */
 .hero {
-  padding: 40px 0;
+  padding: 30px 0;
 }
 
 .hero-grid {
@@ -84,31 +84,55 @@ a.cta {
   align-items: center;
 }
 
+/* STACK HERO ON MOBILE */
+@media (max-width: 900px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero-text,
+  .hero-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+}
+
+/* HERO TEXT */
 .hero-text {
   max-width: 100%;
   word-wrap: break-word;
+  text-align: center; /* center text on mobile */
 }
 
 .hero-text h1 {
-  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-size: clamp(1.3rem, 5vw, 2rem);
   line-height: 1.3;
   word-break: break-word;
   margin-bottom: 12px;
 }
 
 .hero-text p {
-  font-size: clamp(0.85rem, 3vw, 1rem);
+  font-size: clamp(0.8rem, 3vw, 1rem);
   line-height: 1.4;
-  word-break: break-word;
+  margin-bottom: 15px;
   color: var(--text-muted);
-  margin-bottom: 20px;
 }
 
 .hero-ctas {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .hero-ctas .btn {
@@ -128,15 +152,14 @@ a.cta {
 
 /* SCROLLING BADGES */
 .badges-container {
-  overflow: hidden;
-  margin-top: 20px;
+  overflow-x: auto; /* allow horizontal scroll if needed */
+  margin-top: 15px;
 }
 
 .badges-wrapper {
   display: flex;
-  flex-wrap: wrap; /* wrap on mobile */
+  flex-wrap: nowrap;
   gap: 8px;
-  animation: none; /* disable scroll on small screens */
 }
 
 .badge {
@@ -149,10 +172,9 @@ a.cta {
   font-size: 0.8rem;
 }
 
-/* ENABLE SCROLL ON BIG SCREENS */
-@media(min-width: 600px) {
+/* ENABLE ANIMATION ONLY ON LARGE SCREENS */
+@media (min-width: 600px) {
   .badges-wrapper {
-    flex-wrap: nowrap;
     animation: scroll 12s linear infinite;
   }
 }
@@ -220,22 +242,8 @@ a.cta {
   margin-left: 10px;
 }
 
-/* MOBILE RESPONSIVE */
+/* MOBILE NAV */
 @media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .hero-ctas {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .hero-image img {
-    max-height: 300px;
-  }
-
   .main-nav {
     display: none;
     flex-direction: column;
@@ -258,20 +266,5 @@ a.cta {
 
   #mobile-toggle {
     display: block;
-  }
-}
-
-/* SMALL PHONES */
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 1.4rem;
-  }
-
-  .hero-text p {
-    font-size: 0.85rem;
-  }
-
-  .badges-wrapper {
-    gap: 6px;
   }
 }
