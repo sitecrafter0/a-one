@@ -38,7 +38,7 @@ button {
   font-family: inherit;
 }
 
-/* Header */
+/* HEADER */
 .site-header {
   display: flex;
   align-items: center;
@@ -128,26 +128,61 @@ a.cta {
   color: var(--text-muted);
 }
 
+/* HERO CTAS */
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-.hero-ctas .btn {
-  flex: 1 1 auto;
-  min-width: 120px;
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 140px;
 }
 
-/* HERO IMAGE */
-.hero-image img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  object-fit: cover;
+/* PRIMARY BUTTON */
+.btn-primary {
+  background: var(--accent);
+  color: #072b16;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-primary:hover {
+  background: #97c85f;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+/* OUTLINE BUTTON */
+.btn-outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: var(--text-light);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--accent2);
+  color: var(--accent2);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* RESPONSIVE BUTTONS */
+@media(max-width: 900px) {
+  .btn {
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 /* SCROLLING BADGES */
@@ -172,8 +207,8 @@ a.cta {
   font-size: 0.8rem;
 }
 
-/* ENABLE ANIMATION ONLY ON LARGE SCREENS */
-@media (min-width: 600px) {
+/* ENABLE SCROLL ONLY ON LARGE SCREENS */
+@media(min-width: 600px) {
   .badges-wrapper {
     animation: scroll 12s linear infinite;
   }
@@ -266,5 +301,18 @@ a.cta {
 
   #mobile-toggle {
     display: block;
+  }
+}
+
+/* SMALL PHONES */
+@media(max-width: 480px){
+  .hero-text h1{
+    font-size:1.3rem;
+  }
+  .hero-text p{
+    font-size:0.8rem;
+  }
+  .badges-wrapper {
+    gap:6px;
   }
 }
