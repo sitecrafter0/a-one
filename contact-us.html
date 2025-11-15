@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — A-One Construction</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <img src="assets/images/logo-light.svg" alt="A-One Construction">
+        <span>A-One Construction</span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="our-mission.html">Mission</a>
+        <a href="our-vision.html">Vision</a>
+        <a href="crew.html">Crew</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact-us.html" class="active">Contact Us</a>
+        <a href="find-us.html">Find Us</a>
+      </nav>
+      <button id="mobile-toggle" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container content contact-page">
+    <section class="contact-form-section">
+      <h1>Get in Touch</h1>
+      <p>Have questions or want a free quote? Fill out the form and we’ll respond promptly.</p>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="reason">Reason</label>
+          <select id="reason" name="reason" required>
+            <option value="">Select a reason</option>
+            <option value="quote">Request a Quote</option>
+            <option value="general">General Inquiry</option>
+            <option value="report">Report Issue</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <div class="form-row small">
+          <label for="captcha">What colour is a panda? (Anti-spam)</label>
+          <input id="captcha" name="captcha" type="text" required>
+        </div>
+
+        <div class="form-row">
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <button class="btn" type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="contact-info">
+      <h3>Our Contact Info</h3>
+      <p>Office: <a href="tel:+27538311133">053 831 1133</a><br>
+         Cell: <a href="tel:+27836504468">083 650 4468</a><br>
+         Email: <a href="mailto:info@a-onekby.co.za">info@a-onekby.co.za</a></p>
+      <p>Address: 67 Carrington Way, Klisserville, Kimberley, 8301</p>
+      <p class="hours"><strong>Hours:</strong><br>Mon–Fri 8:00–17:00</p>
+      <a href="index.html" class="btn btn-outline">Back to Home</a>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>&copy; <span id="year-7"></span> A-One Construction</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
