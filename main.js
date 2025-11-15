@@ -1,22 +1,30 @@
-// Update footer year
+// Set current year
 document.getElementById('year')?.textContent = new Date().getFullYear();
 
-// Mobile navigation toggle
+// Mobile nav toggle
 const toggle = document.getElementById('mobile-toggle');
 const nav = document.querySelector('.main-nav');
+
 if(toggle && nav){
-  toggle.addEventListener('click',()=>{
+  toggle.addEventListener('click', ()=>{
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
-    nav.style.display = expanded ? 'none' : 'flex';
+    nav.classList.toggle('mobile-open');
+  });
+
+  window.addEventListener('resize', ()=>{
+    if(window.innerWidth > 900){
+      nav.classList.remove('mobile-open');
+      toggle.setAttribute('aria-expanded','false');
+    }
   });
 }
 
-// Smooth scroll anchor links
+// Smooth scroll for anchors
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click', e=>{
     e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
-    if(target) target.scrollIntoView({behavior:'smooth'});
+    const el = document.querySelector(a.getAttribute('href'));
+    if(el) el.scrollIntoView({behavior:'smooth'});
   });
 });
