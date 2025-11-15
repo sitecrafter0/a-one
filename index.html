@@ -6,7 +6,7 @@
   <meta name="description" content="A-One Construction — Professional building, maintenance, plumbing, electrical and tiling services in Kimberley.">
   <title>A-One Construction — Kimberley</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="site-header">
@@ -14,17 +14,18 @@
       <div class="brand">
         <a href="index.html"><img src="assets/images/logo-light.svg" alt="A-One Construction"></a>
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" id="mobile-menu">
         <a href="index.html" class="active">Home</a>
         <a href="about-us.html">About Us</a>
         <a href="our-mission.html">Our Mission</a>
         <a href="our-vision.html">Our Vision</a>
         <a href="crew.html">Crew</a>
         <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
         <a href="contact-us.html" class="cta">Contact Us</a>
         <a href="find-us.html">Find Us</a>
       </nav>
-      <button id="mobile-toggle" aria-expanded="false">☰</button>
+      <button id="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu">☰</button>
     </div>
   </header>
 
@@ -40,7 +41,7 @@
             <a class="btn btn-outline" href="services.html">Our Services</a>
           </div>
 
-          <!-- Scrolling Badges -->
+          <!-- SCROLLING BADGES -->
           <section class="badges-container">
             <div class="badges-wrapper">
               <div class="badge">Santam Approved</div>
@@ -53,8 +54,8 @@
               <div class="badge">BEE Accredited</div>
             </div>
           </section>
-        </div>
 
+        </div>
         <div class="hero-image">
           <img src="assets/images/hero-construction.jpg" alt="Construction team">
         </div>
@@ -144,6 +145,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

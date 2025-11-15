@@ -28,3 +28,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     if(el) el.scrollIntoView({behavior:'smooth'});
   });
 });
+// Mobile nav toggle
+const toggleBtn = document.getElementById('mobile-toggle');
+const menu = document.getElementById('mobile-menu');
+
+toggleBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  toggleBtn.setAttribute('aria-expanded', menu.classList.contains('active'));
+});
+
+// Auto year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
